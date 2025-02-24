@@ -10,3 +10,6 @@ command: py -m pip install requests
 # STEP 5: Use Request package
 # OUTPUT
 ![img.png](img.png)
+
+# REFERENCE:
+https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/
