@@ -27,16 +27,26 @@ def create(users: list):
 
 def searchById(users: list, userId: int):
     user = userService.searchById(users, userId)
-    user.display()
+    if user is None:
+        print("404 User not found")
+    else:
+        user.display()
 
 def searchByName(users: list, name: str):
     user = userService.searchByName(users, name)
-    user.display()
+    if user is None:
+        print("404 User not found")
+    else:
+        user.display()
 
 def listUsers(users: list):
     userService.listUser(users)
 
 def remove(users: list, userId: int):
     user = userService.searchById(users, userId)
-    userService.remove(users, userId)
-    print(user.getName() + " is Removed")
+    if user is None:
+        print("404 User not found")
+    else:
+        user.display()
+        userService.remove(users, userId)
+        print(user.getName() + " is Removed")

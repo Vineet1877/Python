@@ -9,10 +9,14 @@ def searchById(users: list, userId: int):
         if user.getUserId() == userId:
             return user
 
+    return None
+
 def searchByName(users: list, userName: str):
     for user in users:
         if user.getName() == userName:
             return user
+
+    return None
 
 def listUser(users: list):
     for user in users:
