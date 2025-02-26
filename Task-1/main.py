@@ -1,6 +1,15 @@
 import requests
+import os
 
-response = requests.get("https://jsonplaceholder.typicode.com/todos")
-data = response.json()
+version = input("Enter version: ")
 
-print(data)
+if requests.__version__ == version or version == "":
+    response = requests.get("https://jsonplaceholder.typicode.com/todos")
+    data = response.json()
+    print(data)
+else:
+    os.system(f"python -m pip install requests=={version}")
+
+
+
+

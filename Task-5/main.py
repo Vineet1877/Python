@@ -1,5 +1,4 @@
 import userController
-
 users = []
 
 while True:
